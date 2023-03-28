@@ -417,9 +417,14 @@ footer {
 
 
 /* BOOKS.INDEX */
+
 #books__landing, 
 #books__main {
   background-color: #C5212122;
+}
+
+#books__main {
+  min-height: 100vh;
 }
 
 
@@ -440,6 +445,38 @@ footer {
   outline: none;
   width: 100%;
   max-width: 200px;
+}
+
+.books__loading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #C52121;
+}
+
+.books__loading--spinner {
+  display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+  display: block !important;
+}
+
+.fa-spinner {
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
